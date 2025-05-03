@@ -76,10 +76,10 @@ export default function Home() {
             </div>
             {/* Content Container (remains the same) */}
             <div className="container relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl mb-4">
+                <h1 className="text-4xl font-bold tracking-tight text-white-900 sm:text-5xl lg:text-6xl mb-4">
                     Empowering India's Health Journey
                 </h1>
-                <p className="mx-auto max-w-3xl text-lg text-gray-600 sm:text-xl mb-8">
+                <p className="mx-auto max-w-3xl text-lg text-white-600 sm:text-xl mb-8">
                     Securely unify your medical records, wearable data, and checkups - all in one place.
                 </p>
                 <div className="mb-10 flex flex-col justify-center gap-4 sm:flex-row">
