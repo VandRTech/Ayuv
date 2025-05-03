@@ -61,7 +61,7 @@ export default function Home() {
                     <div className="flex h-16 items-center justify-between">
                         <div className="flex items-center">
                              {/* Assuming logo has transparent background or update/invert if needed */}
-                            <Image src="/placeholder-logo.png.png" alt="Ayuv" width={80} height={80} className="h-14 sm:h-16 w-auto" priority />
+                            <Image src="/placeholder-logo.png" alt="Ayuv" width={80} height={80} className="h-14 sm:h-16 w-auto" priority />
                         </div>
                         <nav className="hidden items-center space-x-6 md:flex">
                              {/* THEME: Light text for nav links */}
