@@ -34,7 +34,7 @@ export default function Home() {
                 <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 items-center justify-between">
                         <div className="flex items-center">
-                            <Image src="/placeholder-logo.png" alt="Ayuv" width={80} height={80} className="h-14 sm:h-16 w-auto" priority />
+                            <Image src="/placeholder-logo.png.png" alt="Ayuv" width={80} height={80} className="h-14 sm:h-16 w-auto" priority />
                         </div>
                         <nav className="hidden items-center space-x-6 md:flex">
                             <a href="#about" className="text-sm font-medium text-gray-600 transition-colors hover:text-blue-600">About</a>
