@@ -1,16 +1,4 @@
 
-{DDC698E6-...9084343E2}
-
-PNG
-placeholder-logo.png
-
-PNG
-{330922B3-...51136AB4A}
-
-PNG
-{A37E7A7D-...C47275AAC}
-
-PNG
 "use client"
 
 
