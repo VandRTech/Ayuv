@@ -34,9 +34,8 @@ export default function Home() {
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
-              <a href="#" className="text-xl font-bold text-gray-900">
-                AYUV
-              </a>
+              <img src="placeholder-logo.png.png" alt="Ayuv" className="h-8 w-auto" />
+              
             </div>
             <nav className="hidden md:flex items-center space-x-6">
               <a href="#about" className="text-sm font-medium text-gray-600 hover:text-gray-900">
