@@ -161,48 +161,117 @@ export default function Home() {
                     </div>
                 </motion.section>
 
-               {/* How It Works Section */}
-                {/* // UPDATE: Removed green circles, relying on slide-in animation for pathway */}
-                <motion.section
-                    id="how-it-works"
-                    className="w-full bg-gray-800 py-12 lg:py-20" // Reduced Padding
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                    variants={staggerContainer}
-                 >
-                    <div className="container mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-                        <motion.h2 variants={fadeInUp} className="mb-10 text-3xl font-bold tracking-tight text-white sm:text-4xl">How It Works</motion.h2> {/* Reduced Margin */}
-                        <motion.div
-                            className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-4"
-                            variants={staggerContainer} // Ensures steps animate one after another
-                         >
-                            {[
-                                { icon: UserPlus, title: "Link Your ABHA ID", desc: "Securely create your AYUV profile by authenticating with your Aadhaar/ABHA ID." },
-                                { icon: RefreshCw, title: "Sync Your Data", desc: "Connect your wearables and allow AYUV to fetch your ABHA-linked medical records." },
-                                { icon: LockKeyhole, title: "Manage Consent", desc: "Easily grant or revoke access for healthcare providers using our secure blockchain system." },
-                                { icon: Activity, title: "Get Health Insights", desc: "Receive personalized reminders and view your health trends all in one place." },
-                            ].map((step, index) => {
-                                const Icon = step.icon;
-                                return (
-                                    // Each step slides in sequentially, creating the moving pathway effect
-                                    <motion.div key={index} variants={slideInFromRight} className="relative">
-                                        <div className="flex flex-col items-center text-center">
-                                            {/* Large Green Circle DIV completely removed */}
+{/* How It Works Section */}
+<motion.section
+  id="how-it-works"
+  className="w-full bg-gray-800 py-12 lg:py-20"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  variants={staggerContainer}
+>
+  <div className="container mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+    <motion.h2
+      variants={fadeInUp}
+      className="mb-10 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+    >
+      How AYUV Works: Your Health, Simplified and Secured
+    </motion.h2>
 
-                                            {/* Icon container remains */}
-                                            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-900">
-                                                <Icon className="h-6 w-6 text-green-300" />
-                                            </div>
-                                            <h3 className="mb-2 text-lg font-semibold text-white">{step.title}</h3>
-                                            <p className="text-sm text-gray-400">{step.desc}</p>
-                                        </div>
-                                    </motion.div>
-                                );
-                            })}
-                        </motion.div>
-                    </div>
-                </motion.section>
+    <motion.p
+      variants={fadeInUp}
+      className="mb-12 max-w-3xl mx-auto text-gray-300 text-base sm:text-lg"
+    >
+      AYUV is designed to empower you with seamless control over your health data. Our platform securely connects your medical records, wearable device data, and preventive care reminders - all in one place. Here’s how you can take charge of your health journey with AYUV:
+    </motion.p>
+
+    <motion.div
+      className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-4"
+      variants={staggerContainer}
+    >
+      {[
+        {
+          icon: UserPlus,
+          title: "Link Your ABHA ID",
+          desc: (
+            <>
+              Securely create your AYUV profile by authenticating with your Aadhaar-linked ABHA digital health ID. This unique identifier connects you with India’s national digital health ecosystem, ensuring your health data is unified and accessible only to you.
+              <br />
+              <strong className="block mt-2 text-green-400">
+                Why ABHA? It’s the foundation for trusted, interoperable health records across hospitals, labs, and clinics nationwide.
+              </strong>
+            </>
+          ),
+        },
+        {
+          icon: RefreshCw,
+          title: "Sync Your Data",
+          desc: (
+            <>
+              Effortlessly connect your wearable devices like fitness bands and smartwatches to AYUV. Additionally, AYUV fetches your ABHA-linked medical records from hospitals, labs, and clinics, consolidating all your health information into a single, easy-to-access digital profile.
+              <br />
+              <strong className="block mt-2 text-green-400">
+                This unified data empowers you and your healthcare providers with a comprehensive health overview anytime, anywhere.
+              </strong>
+            </>
+          ),
+        },
+        {
+          icon: LockKeyhole,
+          title: "Manage Consent",
+          desc: (
+            <>
+              You are in full control of who accesses your health data. Using our secure blockchain-powered consent management system, you can grant or revoke permissions for doctors, hospitals, or insurers with complete transparency and immutability.
+              <br />
+              <strong className="block mt-2 text-green-400">
+                Every access is logged on the blockchain, ensuring your privacy and trust are never compromised.
+              </strong>
+            </>
+          ),
+        },
+        {
+          icon: Activity,
+          title: "Get Health Insights",
+          desc: (
+            <>
+              AYUV analyzes your health data to provide personalized insights, trends, and preventive care reminders. From tracking your blood pressure and glucose levels to nudging you for timely vaccinations and screenings, AYUV helps you stay proactive about your wellbeing.
+              <br />
+              <strong className="block mt-2 text-green-400">
+                Empower yourself with actionable health intelligence designed to keep you and your family healthier, longer.
+              </strong>
+            </>
+          ),
+        },
+      ].map((step, index) => {
+        const Icon = step.icon;
+        return (
+          <motion.div
+            key={index}
+            variants={slideInFromRight}
+            className="relative"
+          >
+            <div className="flex flex-col items-center text-center px-4">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-900">
+                <Icon className="h-6 w-6 text-green-300" />
+              </div>
+              <h3 className="mb-3 text-lg font-semibold text-white">
+                {step.title}
+              </h3>
+              <p className="text-sm text-gray-400">{step.desc}</p>
+            </div>
+          </motion.div>
+        );
+      })}
+    </motion.div>
+
+    <motion.p
+      variants={fadeInUp}
+      className="mt-16 max-w-3xl mx-auto text-gray-300 text-center text-base sm:text-lg"
+    >
+      AYUV is more than just a digital health record - it’s your personal health companion, built to support a healthier India through technology, privacy, and empowerment. Ready to take control? Join AYUV today and experience the future of healthcare.
+    </motion.p>
+  </div>
+</motion.section>
 
                 {/* Testimonials Section */}
                 <motion.section className="w-full bg-gray-900 py-12 lg:py-20" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={fadeInUp}> {/* Reduced Padding */}
