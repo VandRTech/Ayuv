@@ -3,26 +3,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { motion, Variants } from "framer-motion";
 import { Mail } from "lucide-react"; // Icon for apply button
 
-// Animation Variants (can reuse from your main page or define here)
-const fadeInUp: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-}
-const fadeInFromLeft: Variants = {
-    hidden: { opacity: 0, x: -30 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } },
-}
-const staggerContainer: Variants = {
-    hidden: { opacity: 1 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
-}
-const buttonHoverTapEffect = {
-    hover: { scale: 1.05, transition: { duration: 0.2 } },
-    tap: { scale: 0.95 }
-}
+
 
 // Job data extracted from the PDF
 const jobOpenings = [
