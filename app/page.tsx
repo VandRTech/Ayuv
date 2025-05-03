@@ -61,36 +61,37 @@ export default function Home() {
             </header>
 
             <main>
-                {/* Hero Section */}
-                <section className="relative w-full overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50 py-24 sm:py-32 lg:py-40">
-                    <div className="absolute inset-0 z-0">
-                        <Image
-                            src="/placeholder.svg?height=720&width=1280"
-                            alt="Abstract background pattern"
-                            layout="fill"
-                            objectFit="cover"
-                            className="opacity-10 sm:opacity-15"
-                            priority
-                        />
-                    </div>
-                    <div className="container relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-                        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl mb-4">
-                            Empowering India's Health Journey
-                        </h1>
-                        <p className="mx-auto max-w-3xl text-lg text-gray-600 sm:text-xl mb-8">
-                            Securely unify your medical records, wearable data, and checkups - all in one place.
-                        </p>
-                        <div className="mb-10 flex flex-col justify-center gap-4 sm:flex-row">
-                            <Button size="lg" asChild>
-                                <a href="#early-access">Join Our Early Access</a>
-                            </Button>
-                            <Button variant="outline" size="lg" asChild>
-                                <a href="#features">Learn More</a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
-
+{/* Hero Section */}
+        <section className="relative w-full overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50 py-24 sm:py-32 lg:py-40">
+            {/* Background Image Container */}
+            <div className="absolute inset-0 z-0"> {/* Opacity classes removed from Image wrapper */}
+                <Image
+                    src="/placeholder.svg?height=720&width=1280"
+                    alt="Abstract background pattern"
+                    layout="fill"
+                    objectFit="cover"
+                    // className="opacity-10 sm:opacity-15" // <<< REMOVED THIS LINE
+                    priority
+                />
+            </div>
+            {/* Content Container (remains the same) */}
+            <div className="container relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl mb-4">
+                    Empowering India's Health Journey
+                </h1>
+                <p className="mx-auto max-w-3xl text-lg text-gray-600 sm:text-xl mb-8">
+                    Securely unify your medical records, wearable data, and checkups - all in one place.
+                </p>
+                <div className="mb-10 flex flex-col justify-center gap-4 sm:flex-row">
+                    <Button size="lg" asChild>
+                        <a href="#early-access">Join Our Early Access</a>
+                    </Button>
+                    <Button variant="outline" size="lg" asChild>
+                        <a href="#features">Learn More</a>
+                    </Button>
+                </div>
+            </div>
+        </section>
                 {/* Key Features Section */}
                 <section id="features" className="w-full bg-white py-16 lg:py-24">
                     <div className="container mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
