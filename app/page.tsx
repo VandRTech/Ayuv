@@ -69,7 +69,7 @@ export default function Home() {
                     <div className="flex h-24 items-center justify-between"> {/* Adjusted height */}
                         <div className="flex items-center">
                              {/* Adjusted logo size */}
-                            <Image src="/placeholder-logo.png.png" alt="Ayuv" width={100} height={100} className="h-20 w-auto" priority />
+                            <Image src="/placeholder-logo.png" alt="Ayuv" width={100} height={100} className="h-20 w-auto" priority />
                         </div>
                         <nav className="hidden items-center space-x-6 md:flex">
                             <a href="#about" className="text-sm font-medium text-gray-300 transition-colors hover:text-green-400">About</a>
@@ -161,11 +161,22 @@ export default function Home() {
                     </div>
                 </motion.section>
 
-                {/* How It Works Section */}
-                <motion.section id="how-it-works" className="w-full bg-gray-800 py-12 lg:py-20" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={staggerContainer}> {/* Reduced Padding */}
+               {/* How It Works Section */}
+                {/* // UPDATE: Removed green circles, relying on slide-in animation for pathway */}
+                <motion.section
+                    id="how-it-works"
+                    className="w-full bg-gray-800 py-12 lg:py-20" // Reduced Padding
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={staggerContainer}
+                 >
                     <div className="container mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
                         <motion.h2 variants={fadeInUp} className="mb-10 text-3xl font-bold tracking-tight text-white sm:text-4xl">How It Works</motion.h2> {/* Reduced Margin */}
-                        <motion.div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-4" variants={staggerContainer}>
+                        <motion.div
+                            className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-4"
+                            variants={staggerContainer} // Ensures steps animate one after another
+                         >
                             {[
                                 { icon: UserPlus, title: "Link Your ABHA ID", desc: "Securely create your AYUV profile by authenticating with your Aadhaar/ABHA ID." },
                                 { icon: RefreshCw, title: "Sync Your Data", desc: "Connect your wearables and allow AYUV to fetch your ABHA-linked medical records." },
@@ -174,12 +185,12 @@ export default function Home() {
                             ].map((step, index) => {
                                 const Icon = step.icon;
                                 return (
-                                    <motion.div key={index} variants={slideInFromRight} className="relative"> {/* Slide-in Animation */}
-                                        {/* No Connecting Line Div */}
+                                    // Each step slides in sequentially, creating the moving pathway effect
+                                    <motion.div key={index} variants={slideInFromRight} className="relative">
                                         <div className="flex flex-col items-center text-center">
-                                            <div className="relative z-10 mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-600 text-white">
-                                                {/* No Number Span */}
-                                            </div>
+                                            {/* Large Green Circle DIV completely removed */}
+
+                                            {/* Icon container remains */}
                                             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-900">
                                                 <Icon className="h-6 w-6 text-green-300" />
                                             </div>
