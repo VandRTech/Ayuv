@@ -1,8 +1,6 @@
 
 "use client"
 
-
-
 import { useState } from "react"
 
 import { Button } from "@/components/ui/button"
@@ -499,11 +497,9 @@ Sign up for our early access program and get exclusive updates as we revolutioni
 
 </motion.p>
 
-<motion.form
-    variants={fadeInUp}
-    className="mx-auto max-w-md"
-    onSubmit={handleWaitlistSubmit} // <<< Check this line VERY carefully for typos!
->
+<motion.form variants={fadeInUp} className="mx-auto max-w-md">
+
+<div className="flex flex-col gap-3 sm:flex-row">
 
 <Input type="email" placeholder="Enter your email" className="flex-grow bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-green-500 focus:ring-green-500" required />
 
@@ -682,7 +678,6 @@ Join the Waitlist
 </div>
 
 )
-
 }
 
 
