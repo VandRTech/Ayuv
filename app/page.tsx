@@ -66,7 +66,7 @@ export default function Home() {
                     <div className="flex h-24 items-center justify-between">
                         <div className="flex items-center">
                              {/* // UPDATE: Increased logo size & adjusted intrinsic props */}
-                            <Image src="/placeholder-logo.png.png" alt="Ayuv" width={100} height={100} className="h-20 w-auto" priority />
+                            <Image src="/placeholder-logo.png" alt="Ayuv" width={100} height={100} className="h-20 w-auto" priority />
                         </div>
                         <nav className="hidden items-center space-x-6 md:flex">
                             <a href="#about" className="text-sm font-medium text-gray-300 transition-colors hover:text-green-400">About</a>
